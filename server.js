@@ -12,9 +12,9 @@ app.use(express.json())
 
 app.use('/',register);
 app.use('/',todolist);
-const port = process.env.PORT;
-app.listen(port,()=>{
-    console.log(`listening on port ${port}`);
+
+app.listen(process.env.PORT,()=>{
+    console.log(`listening on port ${process.env.PORT}`);
 });
 
 
