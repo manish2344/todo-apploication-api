@@ -7,13 +7,14 @@ const app = express();
 const register= require('./router/register');
 const todolist = require("./router/Todo");
 var cors = require('cors');
+const port = process.env.PORT || 5000
 app.use(express.json());
 app.use(cors()) 
 app.use('/',register);
 app.use('/',todolist);
 
-app.listen(process.env.PORT,()=>{
-    console.log(`listening on port ${process.env.PORT}`);
+app.listen(port,()=>{
+    console.log(`listening on port ${port}`);
 });
 
 
